@@ -1,7 +1,7 @@
 
 import { useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { Upload, FileText } from "lucide-react";
+import { Upload, FileText, ArrowDownToLine } from "lucide-react";
 import { useFile } from "@/contexts/FileContext";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -85,42 +85,45 @@ const FileUploader = () => {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto">
-      <div
-        className={`border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition-all ${
-          isDragging
-            ? "border-blue-500 bg-blue-50"
-            : "border-gray-300 hover:border-blue-400"
-        }`}
-        onDragOver={handleDragOver}
-        onDragLeave={handleDragLeave}
-        onDrop={handleDrop}
-        onClick={() => document.getElementById("file-input")?.click()}
-      >
-        <input
-          id="file-input"
-          type="file"
-          className="hidden"
-          onChange={handleFileChange}
-        />
-        <Upload className="mx-auto h-12 w-12 text-gray-400" />
-        <h3 className="mt-2 text-sm font-medium text-gray-900">
-          {isDragging ? "Drop your file here" : "Upload a file"}
-        </h3>
-        <p className="mt-1 text-xs text-gray-500">
-          Drag and drop or click to select a file
-        </p>
-      </div>
-      
-      {isUploading && (
-        <div className="mt-4">
-          <div className="flex justify-between text-sm mb-1">
-            <span>Uploading...</span>
-            <span>{uploadProgress}%</span>
-          </div>
-          <Progress value={uploadProgress} className="h-2" />
+    <div className="w-full max-w-xl mx-auto hover:scale-105 transition-transform">
+
+    {isUploading && (
+        <div className="m-8">
+          <Progress value={uploadProgress} className="h-9 bg-[url('./assets/bg1upscale.png')] " >
+          </Progress>
         </div>
       )}
+
+      
+      {!isUploading && (
+        <div
+          className={`border-2 bg-gray-200 shadow-md rounded-lg p-32 text-center cursor-pointer transition-all ${
+            isDragging
+              ? "border-gray-300 -500 bg-blue-50"
+              : "border-gray-300 hover:border-gray-400"
+          }`}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+          onClick={() => document.getElementById("file-input")?.click()}
+        >
+          <input
+            id="file-input"
+            type="file"
+            className="hidden"
+            onChange={handleFileChange}
+          />
+          <ArrowDownToLine className="mx-auto h-12 w-12 text-gray-400" />
+          <h3 className="mt-2 text-sm font-medium text-gray-900">
+            {isDragging ? "Drop your file here" : ""}
+          </h3>
+          <div className="flex w-full items-center justify-center">
+            <div className="w-24 h-3 bg-[url('./assets/bg1upscale.png')] bg-cover bg-center bg-no-repeat rounded-xl flex items-center justify-center"></div>
+          </div>
+        </div>
+      )}
+      
+      
     </div>
   );
 };
