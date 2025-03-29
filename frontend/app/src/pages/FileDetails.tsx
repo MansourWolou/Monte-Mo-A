@@ -11,7 +11,7 @@ const FileDetails = () => {
     {
       id: 1,
       timestamp: "00:00:05:19",
-      thumbnail: "/placeholder.svg?height=80&width=144",
+      thumbnail: "/assets/video-sample-1.png",
       alt: "City street with red bus",
       summary:
         "Une rue animée en ville avec des gens qui marchent, des voitures qui passent et de grands immeubles en arrière-plan. La scène est dynamique avec un mélange d'architecture moderne et classique",
@@ -19,7 +19,7 @@ const FileDetails = () => {
     {
       id: 2,
       timestamp: "00:00:05:19",
-      thumbnail: "/placeholder.svg?height=80&width=144",
+      thumbnail: "/assets/video-sample-1.png",
       alt: "Forest path",
       summary:
         "Un chemin forestier serein avec la lumière du soleil filtrant à travers les arbres, créant des ombres mouchetées sur le sol. Le chemin est bordé de verdure luxuriante et de fleurs sauvages.",
@@ -27,7 +27,7 @@ const FileDetails = () => {
     {
       id: 3,
       timestamp: "00:00:05:19",
-      thumbnail: "/placeholder.svg?height=80&width=144",
+      thumbnail: "/assets/video-sample-1.png",
       alt: "Person reading",
       summary:
         "Une scène intérieure chaleureuse avec une personne lisant un livre près d'une cheminée. La pièce est doucement éclairée avec des couleurs chaudes et accueillantes, et une tasse de thé repose sur une table à proximité",
@@ -53,7 +53,8 @@ const FileDetails = () => {
   
       {/* Logo */}
       <div className="absolute left-12 top-12 z-10 h-24 w-24">
-        
+
+        <video src="/assets/logo.mp4"  autoplay loop></video>
       </div>
 
       {/* Main content */}
@@ -66,8 +67,8 @@ const FileDetails = () => {
               <div className="mr-4 bg-gray-200 z-10 text-gray-800 px-4 py-1 rounded-full">{video.timestamp}</div>
               <div className="relative h-20 w-36  overflow-hidden rounded-xl border-4 border-white">
                
-                <div className="absolute bottom-2 right-2 rounded-full bg-black bg-opacity-50 p-2">
-                  
+                <div className="absolute  rounded-full object-cover">
+                  <img src={video.thumbnail} alt={video.alt} className="object-cover" />
                 </div>
               </div>
               <div className="mx-4 h-[2px] w-16 bg-[#d9d9d9]"></div>
@@ -103,8 +104,10 @@ const FileDetails = () => {
           {addedVideos.map((videoId) => {
             const video = videos.find((v) => v.id === videoId)
             return video ? (
-              <div key={`added-${videoId}`} className="relative left-[-40px] overflow-hidden rounded-lg border-4 border-white">
-               
+              <div key={`added-${videoId}`} className="relative h-20 w-36 left-[-40px] overflow-hidden rounded-lg border-4 border-white">
+                <div className="absolute  rounded-full object-cover">
+                  <img src={video.thumbnail} alt={video.alt} className="object-cover" />
+                </div>
               </div>
             ) : null
           })}
