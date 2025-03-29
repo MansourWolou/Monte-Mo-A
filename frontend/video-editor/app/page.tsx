@@ -80,14 +80,14 @@ export default function VideoEditor() {
                   height={80}
                   className="h-full w-full object-cover"
                 />
-                <div className="absolute bottom-2 right-2 rounded-full bg-black bg-opacity-50 p-1">
-                  <div className="h-4 w-4 rounded-full border-2 border-white"></div>
+                <div className="absolute bottom-2 right-2 rounded-full bg-black bg-opacity-50 p-2">
+                  
                 </div>
               </div>
               <div className="mx-4 h-[2px] w-16 bg-[#d9d9d9]"></div>
               <div className="w-80 rounded-lg bg-[#d9d9d9] p-4">
-                <h3 className="mb-2 font-medium">Résumé :</h3>
-                <p className="text-sm">{video.summary}</p>
+                <h3 className="mb-2 font-medium text-black">Résumé :</h3>
+                <p className="text-sm text-black">{video.summary}</p>
                 <button className="mt-4 w-full rounded-md bg-[#a2a2a2] py-2 text-center text-sm">Download vidéo</button>
                 <button
                   className={`mt-2 flex w-full items-center justify-between rounded-md py-2 px-4 text-sm ${
