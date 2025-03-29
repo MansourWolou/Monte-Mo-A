@@ -4,20 +4,21 @@ import FileUploader from "@/components/FileUploader";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 flex flex-col items-center justify-center p-4">
-      <div className="w-full max-w-md">
+    <div className="min-h-screen bg-white flex flex-col items-center justify-center p-4">
+      <div className="w-full">
       
-        <p className="text-center text-gray-600 mb-8">
-          Upload your files securely and access them anywhere
-        </p>
-        
+      <div className="flex items-center justify-center p-5">
+        <video 
+          src="./assets/logo.mp4" 
+          autoPlay 
+          muted // Add muted attribute to enable autoplay
+          playsInline // Add playsInline for iOS support
+          loop 
+          className="h-60"
+        ></video>
+      </div>
         <Card>
-          <CardHeader>
-            <CardTitle>Upload File</CardTitle>
-            <CardDescription>
-              Drag and drop your file or click to browse
-            </CardDescription>
-          </CardHeader>
+        
           <CardContent>
             <FileUploader />
           </CardContent>
