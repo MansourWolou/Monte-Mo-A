@@ -59,7 +59,7 @@ const FileDetails = () => {
 
       {/* Main content */}
       <div className="relative z-10 mx-auto max-w-6xl px-4 py-24">
-      <div className="absolute left-[100px] inset-y-0  w-36  bg-sky-200 bg-[url(/assets/bg1upscale.png)]"></div>
+      <div className="absolute left-[100px] inset-y-0  w-36 bg-sky-200 bg-[url(/assets/bg1upscale.png)]"></div>
         {/* Video clips container */}
         <div className="flex flex-col space-y-16">
           {videos.map((video) => (
