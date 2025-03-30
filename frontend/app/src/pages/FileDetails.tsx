@@ -54,7 +54,7 @@ const FileDetails = () => {
       {/* Logo */}
       <div className="absolute left-12 top-12 z-10 h-24 w-24">
 
-        <video src="/assets/logo.mp4"  autoplay loop></video>
+        <video src="/assets/logo.mp4" autoPlay loop></video>
       </div>
 
       {/* Main content */}
