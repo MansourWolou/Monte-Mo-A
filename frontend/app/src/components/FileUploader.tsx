@@ -88,7 +88,7 @@ const FileUploader = () => {
             description: `${file.name} has been uploaded successfully.`,
           });
           
-          navigate("/file-details");
+          navigate("/search");  // Changed from "/file-details" to "/search"
           return 100;
         }
         return prev + 10;

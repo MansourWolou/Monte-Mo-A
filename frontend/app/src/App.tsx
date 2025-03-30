@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import FileDetails from "./pages/FileDetails";
 import NotFound from "./pages/NotFound";
 import { FileProvider } from "./contexts/FileContext";
+import SearchPage from "./pages/SearchPage";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/search" element={<SearchPage />} />
             <Route path="/file-details" element={<FileDetails />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
