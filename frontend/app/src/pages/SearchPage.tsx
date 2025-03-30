@@ -29,16 +29,18 @@ const SearchPage = () => {
           />
         </div>
 
-        What DO you want to know about this video?
+        <h3 className="font">
+        What do you want to extract about this video?
+        </h3>
 
 
         {/* Image Gallery */}
         <div className="w-full max-w-3xl bg-[#ffad72] rounded-3xl py-4 px-12 mb-1 bg-cover bg-[url(/assets/bg1upscaleH-max1024.png)]">
           <div className="flex flex-row justify-between gap-6">
             {[
-              "../public/assets/video-preview-analysis/highlight_extra_1.jpg",
-              "../public/assets/video-preview-analysis/highlight_extra_2.jpg",
-              "../public/assets/video-preview-analysis/highlight_extra_3.jpg",
+              "./assets/video-preview-analysis/highlight_extra_1.jpg",
+              "./assets/video-preview-analysis/highlight_extra_2.jpg",
+              "./assets/video-preview-analysis/highlight_extra_3.jpg",
             ].map((src, index) => (
               <div key={index} className="rounded-xl overflow-hidden border-4 border-white aspect-video">
                 <img

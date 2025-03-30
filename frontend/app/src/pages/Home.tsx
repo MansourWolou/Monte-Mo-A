@@ -17,7 +17,7 @@ const Home = () => {
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center">
         <video 
-          src="../public/assets/video1_Noir.mp4" 
+          src="./assets/video1_Noir.mp4" 
           autoPlay 
           muted
           playsInline
