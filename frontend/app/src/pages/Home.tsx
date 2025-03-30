@@ -14,8 +14,13 @@ const Home = () => {
           muted // Add muted attribute to enable autoplay
           playsInline // Add playsInline for iOS support
           loop 
-          className="h-60"
+          className="h-60 "
+          
+       
         ></video>
+      </div>
+      <div className="flex items-center justify-center p-5">
+        Upload > search > derush > éditing
       </div>
         <Card>
         
