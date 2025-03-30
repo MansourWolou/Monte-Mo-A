@@ -1,0 +1,15 @@
+{
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
+    },
+    "dist": "dist",
+    "command": "npm run build"
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
