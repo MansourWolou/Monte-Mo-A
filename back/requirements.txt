@@ -1,0 +1,8 @@
+transformers
+torchaudio
+moviepy
+pillow
+requests
+librosa
+soundfile
+accelerate
