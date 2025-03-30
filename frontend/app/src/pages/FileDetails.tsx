@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { ArrowRight } from "lucide-react"
+import { Download, ArrowRight } from "lucide-react"
 
 const FileDetails = () => {
 
@@ -74,20 +74,25 @@ const FileDetails = () => {
               <div className="mx-4 h-[2px] w-16 bg-gray-300"></div>
               <div className="w-80 rounded-lg bg-gray-100 p-4 shadow-xl border">
                 <p className="text-sm text-black">{video.summary}</p>
-                <button className="mt-4 w-full rounded-md bg-[#a2a2a2] py-2 text-center text-sm">Download vidéo</button>
-                <button
-                  className={`mt-2 flex w-full items-center justify-between rounded-md py-2 px-4 text-sm ${
-                    addedVideos.includes(video.id) ? "bg-green-500 text-white" : "bg-[#a2a2a2]"
-                  }`}
-                  onClick={() => handleAddToMontage(video.id)}
-                >
-                  <span>{addedVideos.includes(video.id) ? "Retirer du montage" : "Ajouter au montage"}</span>
-                  {addedVideos.includes(video.id) ? (
-                    <ArrowRight size={16} className="rotate-45" />
-                  ) : (
-                    <ArrowRight size={16} />
-                  )}
-                </button>
+                <div className="flex flex-row justify-between mt-4 space-x-2">
+                  <button className="w-1/2 flex items-center justify-center rounded-md bg-[#a2a2a2] py-2 text-center text-sm">
+                    <Download size={16} className="mr-2" />
+                    Download
+                  </button>
+                  <button
+                    className={`w-1/2 flex items-center justify-between rounded-md py-2 px-4 text-sm ${
+                      addedVideos.includes(video.id) ? "bg-green-500 text-white" : "bg-[#a2a2a2]"
+                    }`}
+                    onClick={() => handleAddToMontage(video.id)}
+                  >
+                    <span>{addedVideos.includes(video.id) ? "Retirer du montage" : "Ajouter au montage"}</span>
+                    {addedVideos.includes(video.id) ? (
+                      <ArrowRight size={16} className="rotate-45" />
+                    ) : (
+                      <ArrowRight size={16} />
+                    )}
+                  </button>
+                </div>
               </div>
             </div>
           ))}
@@ -110,7 +115,10 @@ const FileDetails = () => {
               </div>
             ) : null
           })}
-          <button className="mt-2 w-full rounded-md bg-[#a2a2a2] py-2 text-center text-xs z-50">Download vidéo</button>
+          <button className="mt-2 w-full flex items-center justify-center rounded-md bg-[#a2a2a2] py-2 text-center text-xs z-50">
+            <Download size={16} className="mr-2" />
+            Download
+          </button>
         </div>
       )}
     </div>

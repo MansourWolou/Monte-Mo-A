@@ -28,9 +28,9 @@ const SearchPage = () => {
             className="aspect-square w-full max-w-[200px] box-border"
           />
         </div>
-
+        <div className="py-6">
         What DO you want to know about this video?
-
+        </div>
 
         {/* Image Gallery */}
         <div className="w-full max-w-3xl bg-[#ffad72] rounded-3xl py-4 px-12 mb-1 bg-cover bg-[url(/assets/bg1upscaleH-max1024.png)]">
