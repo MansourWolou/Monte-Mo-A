@@ -10,7 +10,7 @@ const FileDetails = () => {
   const videos = [
     {
       id: 1,
-      timestamp: "00:00:05:19",
+      timestamp: "03:12-04:16",
       thumbnail: "/assets/video-sample-1.png",
       alt: "City street with red bus",
       summary:
@@ -18,7 +18,7 @@ const FileDetails = () => {
     },
     {
       id: 2,
-      timestamp: "00:00:05:19",
+      timestamp: "05:19-06:22",
       thumbnail: "/assets/video-sample-1.png",
       alt: "Forest path",
       summary:
@@ -26,7 +26,7 @@ const FileDetails = () => {
     },
     {
       id: 3,
-      timestamp: "00:00:05:19",
+      timestamp: "07:18-08:21",
       thumbnail: "/assets/video-sample-1.png",
       alt: "Person reading",
       summary:
