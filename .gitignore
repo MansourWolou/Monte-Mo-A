@@ -1,1 +1,7 @@
 frontend/video-editor/package-lock.json
+back/.venv
+back/__pycache__/
+back/output/
+back/uploaded_videos/
+frontend/video-editor/node_modules/
+frontend/video-editor/.next/
