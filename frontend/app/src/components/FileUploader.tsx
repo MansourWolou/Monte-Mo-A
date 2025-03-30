@@ -59,6 +59,18 @@ const FileUploader = () => {
         setFilePreview(e.target?.result as string);
       };
       reader.readAsDataURL(file);
+      const formData = new FormData();
+      formData.append("file", file);
+      fetch("http://127.0.0.1:8000/upload/", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Upload failed");
+          }
+          return response.json();
+        })
     } else {
       setFilePreview(null);
     }
