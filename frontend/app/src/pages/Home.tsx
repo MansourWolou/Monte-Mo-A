@@ -17,7 +17,7 @@ const Home = () => {
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center">
         <video 
-          src="./assets/video1_Noir.mp4" 
+          src="/assets/video1_Noir.mp4" 
           autoPlay 
           muted
           playsInline
@@ -32,7 +32,7 @@ const Home = () => {
       <div className="w-full">
         <div className="flex items-center justify-center p-5">
           <video 
-            src="./assets/logo.mp4" 
+            src="/assets/logo.mp4" 
             autoPlay 
             muted
             playsInline

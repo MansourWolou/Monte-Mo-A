@@ -101,7 +101,7 @@ const FileUploader = () => {
 
     {isUploading && (
         <div className="m-8">
-          <Progress value={uploadProgress} className="h-9 bg-[url('./assets/bg1upscale.png')] " >
+          <Progress value={uploadProgress} className="h-9 bg-[url('/assets/bg1upscale.png')] " >
           </Progress>
         </div>
       )}
